@@ -1,0 +1,78 @@
+
+body {
+    margin: auto;
+    max-width: 1440px;
+    min-width: 320px;
+    min-height: 1024px;
+    font-family: "Montserrat", sans-serif;
+    color: silver;
+    background-image: url("./images/nail-small-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    background-size: 1440px;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+.navigation-list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    list-style: none;
+  }
+
+  .navigation__radio {
+      display: none;
+  }
+
+  .tab {
+    position: absolute;  
+    opacity: 0;
+    transition: opacity 0.8s;
+      
+  }
+
+  .navigation-list__item:focus,
+  .navigation-list__item:hover,
+  .navigation__label:focus,
+  .navigation__label:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+.navigation__label {
+    transition: font-size 0.8s;
+}
+
+.radio-about:checked + .about-label,
+.radio-consulting:checked + .consulting-label,
+.radio-price:checked + .price-label,
+.radio-contacts:checked + .contacts-label,
+.radio-misc:checked + .misc-label {
+font-size: 20px;
+}
+
+.radio-about:checked ~ .tab-about,
+.radio-consulting:checked ~ .tab-consulting,
+.radio-price:checked ~ .tab-price,
+.radio-contacts:checked ~ .tab-contacts,
+.radio-misc:checked ~ .tab-misc {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
